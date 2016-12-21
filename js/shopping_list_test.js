@@ -42,7 +42,7 @@ class ShoppingList{
     }
   }
 
-  // render(){
+  render(){
 
-  // }
+  }
 }
