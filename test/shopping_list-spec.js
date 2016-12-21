@@ -45,7 +45,7 @@ describe('ShoppingListItem', () => {
 
     it('is_done to be true', () => {
       myShoppingListItem.check();
-      myShoppingListItem.is_done.should.equal();
+      myShoppingListItem.is_done.should.equal(true);
     });
 
   })
