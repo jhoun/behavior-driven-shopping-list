@@ -22,7 +22,7 @@ describe('ShoppingListItem', () => {
     expect(myShoppingListItem).to.have.property('description');
   })
 
-  it('should have a description property', () => {
+  it('should have a is_done property', () => {
     expect(myShoppingListItem).to.have.property('is_done');
   })
 
