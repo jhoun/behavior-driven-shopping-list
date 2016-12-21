@@ -53,7 +53,10 @@ describe('ShoppingListItem', () => {
     it('should be a method', () => {
       myShoppingListItem.uncheck.should.be.a('function');
     });
-
+  it('is_done to be false', () => {
+      myShoppingListItem.uncheck();
+      myShoppingListItem.is_done.should.equal();
+    });
 
 
   })
