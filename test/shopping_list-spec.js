@@ -47,6 +47,14 @@ describe('ShoppingListItem', () => {
       myShoppingListItem.check();
       myShoppingListItem.is_done.should.equal(true);
     });
+  })
+
+  describe('ucheck()', () => {
+    it('should be a method', () => {
+      myShoppingListItem.uncheck.should.be.a('function');
+    });
+
+
 
   })
 
