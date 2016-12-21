@@ -65,8 +65,12 @@ describe('ShoppingListItem', () => {
     });
 
     it('should return html formatted string', () => {
-      let finished = myShoppingListItem.getIsDone();
-      myShoppingListItem.render().should.equal(`<li class="completed_${finished}"><span>shoes</span><span>checkered vans</span></li>`);
+      myShoppingListItem.render().should.equal(`<li class="completed_false"><span>shoes</span><span>checkered vans</span></li>`);
+    });
+
+    it('should return html formatted string when uncheck method is invoked', () => {
+      myShoppingListItem.check();
+      myShoppingListItem.render().should.equal(`<li class="completed_true"><span>shoes</span><span>checkered vans</span></li>`);
     });
   });
 })

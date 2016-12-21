@@ -13,9 +13,6 @@ class ShoppingListItem{
     this.is_done;
   }
 
-  getIsDone(){
-    return this.is_done;
-  }
   render(){
     return `<li class="completed_${this.is_done}"><span>${this.name}</span><span>${this.description}</span></li>`;
   }
