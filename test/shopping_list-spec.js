@@ -144,8 +144,11 @@ describe('ShoppingList', () => {
       jaysShoppingList.addItems(hat);
       jaysShoppingList.removeItems();
       jaysShoppingList.items.should.not.contain(hat);
-      console.log(jaysShoppingList.items);
 
     })
+
+    it('should throw error if not an instance', () => {
+      expect(() => jaysShoppingList.addItem('error')).to.throw(Error);
+    });
   })
 });

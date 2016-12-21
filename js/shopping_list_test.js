@@ -33,11 +33,12 @@ class ShoppingList{
   }
 
   removeItems(item){
-    if(item instanceof(ShoppingListItem)){
-      this.items.splice(this.items.indexOf(item), 1);
-    }
     if(item === undefined){
       this.items.pop();
+    } else if (item instanceof(ShoppingListItem)){
+      this.items.splice(this.items.indexOf(item), 1);
+    } else {
+      throw new Error("not available");
     }
   }
 }
