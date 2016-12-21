@@ -55,7 +55,7 @@ describe('ShoppingListItem', () => {
     });
   it('is_done to be false', () => {
       myShoppingListItem.uncheck();
-      myShoppingListItem.is_done.should.equal();
+      myShoppingListItem.is_done.should.equal(false);
     });
 
 
