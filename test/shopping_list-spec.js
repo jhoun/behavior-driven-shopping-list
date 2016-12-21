@@ -15,15 +15,15 @@ describe('ShoppingListItem', () => {
   });
 
   it('should have a name property', () => {
-    expect(myShoppingListItem).to.have.property('name');
+    myShoppingListItem.should.have.property('name');
   })
 
   it('should have a description property', () => {
-    expect(myShoppingListItem).to.have.property('description');
+    myShoppingListItem.should.have.property('description');
   })
 
   it('should have a is_done property', () => {
-    expect(myShoppingListItem).to.have.property('is_done');
+    myShoppingListItem.should.have.property('is_done');
   })
 
   describe('constructor()', () => {
@@ -72,9 +72,15 @@ describe('ShoppingListItem', () => {
 })
 
 describe('ShoppingList', () => {
+
+  let jaysShoppingList = new ShoppingList("dog");
+
   it('should be a class', () => {
     ShoppingList.should.be.a('function');
   });
 
+  it('should have a property', () => {
+    jaysShoppingList.should.have.property();
+  })
 
 });
