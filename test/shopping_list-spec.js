@@ -27,7 +27,11 @@ describe('ShoppingListItem', () => {
   })
 
   describe('constructor()', () => {
-
+    it('should have 2 arguments', () => {
+      let otherShoppingListItem = new ShoppingListItem("iphone", "a smart phone");
+      expect(otherShoppingListItem.name).to.be("iphone");
+      expect(otherShoppingListItem.description).to.be("a smart phone");
+    })
   })
 
   // let shoppingListItem;
