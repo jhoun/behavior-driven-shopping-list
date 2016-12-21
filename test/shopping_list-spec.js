@@ -42,6 +42,12 @@ describe('ShoppingListItem', () => {
     it('should be a method', () => {
       myShoppingListItem.check.should.be.a('function');
     });
+
+    it('is_done to be true', () => {
+      myShoppingListItem.check();
+      myShoppingListItem.is_done.should.equal();
+    });
+
   })
 
 
