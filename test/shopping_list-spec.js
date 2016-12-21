@@ -107,5 +107,12 @@ describe('ShoppingList', () => {
       jaysShoppingList.items.should.contain(shoes);
 
     });
+
+    it('should be an instanceof of ShoppingListItem', () => {
+      var shoes = new ShoppingListItem('vans', 'checkered slip ons');
+
+      jaysShoppingList.addItems(shoes);
+      expect(shoes instanceof ShoppingListItem).to.be.false;
+    })
   });
 });

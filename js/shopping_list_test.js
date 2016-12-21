@@ -25,6 +25,10 @@ class ShoppingList{
   }
 
   addItems(item){
-    this.items.push(item);
+    if(item instanceof(ShoppingListItem)){
+      this.items.push(item);
+    } else {
+      throw "error, not an item";
+    }
   }
 }
