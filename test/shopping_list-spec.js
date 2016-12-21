@@ -133,5 +133,19 @@ describe('ShoppingList', () => {
       jaysShoppingList.removeItems(shoes);
       jaysShoppingList.items.should.not.contain(shoes);
     })
+
+     it('should pop off last item in array if there are no parameters', () => {
+      let shoes = new ShoppingListItem('vans', 'checkered slip ons');
+      let shirt = new ShoppingListItem('t-shirt', 'white');
+      let hat = new ShoppingListItem('beanie', 'blue');
+
+      jaysShoppingList.addItems(shoes);
+      jaysShoppingList.addItems(shirt);
+      jaysShoppingList.addItems(hat);
+      jaysShoppingList.removeItems();
+      jaysShoppingList.items.
+      console.log(jaysShoppingList.items);
+
+    })
   })
 });
