@@ -27,18 +27,21 @@ describe('ShoppingListItem', () => {
   })
 
   describe('constructor()', () => {
-    it('should have 2 arguments', () => {
-      let otherShoppingListItem = new ShoppingListItem("iphone", "a smart phone");
-      expect(otherShoppingListItem.name).to.be("iphone");
-      expect(otherShoppingListItem.description).to.be("a smart phone");
-    })
-
-    it('should have have new instances of name & description', () => {
+    // it('should have 2 arguments', () => {
+    //   let otherShoppingListItem = new ShoppingListItem("iphone", "a smart phone");
+    //   expect(otherShoppingListItem.name).to.be("iphone");
+    //   expect(otherShoppingListItem.description).to.be("a smart phone");
+    // })
+    it('should have 2 arguments that are passed through properties', () => {
       myShoppingListItem.name.should.be.equal('shoes');
       myShoppingListItem.description.should.be.equal('checkered vans');
     })
+  })
 
-
+  describe('check()', () => {
+    it('should be a method', () => {
+      myShoppingListItem.check.should.be.a('function');
+    });
   })
 
 
