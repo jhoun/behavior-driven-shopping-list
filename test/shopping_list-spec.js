@@ -116,7 +116,7 @@ describe('ShoppingList', () => {
     });
 
     it('should not be an instanceof of ShoppingListItem', () => {
-      expectthrow(Error);
+      expect(() => jaysShoppingList.addItem('error')).to.throw(Error);
     });
 
   });
