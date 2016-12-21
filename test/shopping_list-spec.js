@@ -80,7 +80,11 @@ describe('ShoppingList', () => {
   });
 
   it('should have a property', () => {
-    jaysShoppingList.should.have.property();
+    jaysShoppingList.should.have.property('items');
+  })
+
+  it('should have empty array', () => {
+    jaysShoppingList.items.should.equal([]);
   })
 
 });

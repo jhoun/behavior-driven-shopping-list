@@ -24,6 +24,7 @@ class ShoppingListItem{
 
 class ShoppingList{
   constructor(items){
-    this.items = true;
+    this.items = [];
   }
+
 }
