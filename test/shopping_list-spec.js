@@ -35,7 +35,7 @@ describe('ShoppingListItem', () => {
 
     it('should have have new instances of name & description', () => {
       myShoppingListItem.name.should.be.equal('shoes');
-      myShoppingListItem.description.should.be.equal('');
+      myShoppingListItem.description.should.be.equal('checkered vans');
     })
 
 
