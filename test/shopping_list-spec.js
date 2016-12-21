@@ -96,7 +96,7 @@ describe('ShoppingList', () => {
   })
 
   describe('addItem(item)', () => {
-    it('should be a function', () => {
+    it('should be a method', () => {
       jaysShoppingList.addItems.should.be.a('function');
     })
 
@@ -120,4 +120,10 @@ describe('ShoppingList', () => {
     });
 
   });
+
+  describe('removeItem(item)', () => {
+    it('should be a method', () => {
+      jaysShoppingList.removeItem.should.be.a('function');
+    });
+  })
 });
