@@ -27,11 +27,11 @@ describe('ShoppingListItem', () => {
   })
 
   describe('constructor()', () => {
-    // it('should have 2 arguments', () => {
-    //   let otherShoppingListItem = new ShoppingListItem("iphone", "a smart phone");
-    //   expect(otherShoppingListItem.name).to.be("iphone");
-    //   expect(otherShoppingListItem.description).to.be("a smart phone");
-    // })
+    it('should have 2 arguments', () => {
+      let otherShoppingListItem = new ShoppingListItem("iphone", "a smart phone");
+      expect(otherShoppingListItem.name).to.equal("iphone");
+      expect(otherShoppingListItem.description).to.equal("a smart phone");
+    })
     it('should have 2 arguments that are passed through properties', () => {
       myShoppingListItem.name.should.be.equal('shoes');
       myShoppingListItem.description.should.be.equal('checkered vans');
@@ -92,11 +92,15 @@ describe('ShoppingList', () => {
   })
 
   describe('addItem(item)', () => {
-    it('should be a method passing 1 argument', () => {
-      var myShoppingListItem = new ShoppingListItem('shoes', 'checkered vans');
-      var jaysShoppingList = new ShoppingList();
+    it('should be a function', () => {
+      jaysShoppingList.addItems.should.be.a('function');
+    })
 
-      jaysShoppingList.addItem('shoes');
+    it('should be a method passing 1 argument', () => {
+      var shoes = new ShoppingListItem('vans', 'checkered slip ons');
+
+      jaysShoppingList.addItems(shoes);
+      jaysShoppingList.items.should.contain(shoes);
 
     });
   });
