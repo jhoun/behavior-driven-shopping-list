@@ -125,5 +125,13 @@ describe('ShoppingList', () => {
     it('should be a method', () => {
       jaysShoppingList.removeItems.should.be.a('function');
     });
+
+    it('should remove an item in the items array', () => {
+      let shoes = new ShoppingListItem('vans', 'checkered slip ons');
+
+      jaysShoppingList.addItems(shoes);
+      jaysShoppingList.removeItems(shoes);
+      jaysShoppingList.items.should.not.contain(shoes);
+    })
   })
 });

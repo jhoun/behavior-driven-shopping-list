@@ -33,6 +33,8 @@ class ShoppingList{
   }
 
   removeItems(item){
-
+    if(item instanceof(ShoppingListItem)){
+      this.items.splice(3, 1);
+    }
   }
 }
