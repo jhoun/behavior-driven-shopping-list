@@ -6,7 +6,7 @@ describe('ShoppingListItem', () => {
 
   let myShoppingListItem;
 
-  beforeEach(function () {
+  beforeEach( () => {
     myShoppingListItem = new ShoppingListItem("shoes", "checkered vans");
   });
 
@@ -73,7 +73,11 @@ describe('ShoppingListItem', () => {
 
 describe('ShoppingList', () => {
 
-  let jaysShoppingList = new ShoppingList("dog");
+  let jaysShoppingList;
+
+  beforeEach( () => {
+    jaysShoppingList = new ShoppingList();
+  });
 
   it('should be a class', () => {
     ShoppingList.should.be.a('function');
@@ -87,4 +91,13 @@ describe('ShoppingList', () => {
     jaysShoppingList.items.should.deep.equal([]);
   })
 
+  describe('addItem(item)', () => {
+    it('should be a method passing 1 argument', () => {
+      var myShoppingListItem = new ShoppingListItem('shoes', 'checkered vans');
+      var jaysShoppingList = new ShoppingList();
+
+      jaysShoppingList.addItem('shoes');
+
+    });
+  });
 });

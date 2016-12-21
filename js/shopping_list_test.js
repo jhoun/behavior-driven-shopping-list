@@ -23,8 +23,12 @@ class ShoppingListItem{
 
 
 class ShoppingList{
-  constructor(items){
+  constructor(){
     this.items = [];
   }
 
+  addItems(item){
+    console.log(item);
+    this.items.push(item);
+  }
 }
