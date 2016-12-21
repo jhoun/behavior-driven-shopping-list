@@ -112,7 +112,7 @@ describe('ShoppingList', () => {
       var shoes = new ShoppingListItem('vans', 'checkered slip ons');
 
       jaysShoppingList.addItems(shoes);
-      expect(shoes instanceof ShoppingListItem).to.be.false;
+      expect(shoes instanceof ShoppingListItem).to.be.true;
     })
   });
 });
