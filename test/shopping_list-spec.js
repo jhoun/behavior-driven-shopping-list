@@ -49,7 +49,7 @@ describe('ShoppingListItem', () => {
     });
   })
 
-  describe('ucheck()', () => {
+  describe('uncheck()', () => {
     it('should be a method', () => {
       myShoppingListItem.uncheck.should.be.a('function');
     });
@@ -57,8 +57,12 @@ describe('ShoppingListItem', () => {
       myShoppingListItem.uncheck();
       myShoppingListItem.is_done.should.equal(false);
     });
+  })
 
-
+  describe('render()', () => {
+    it('should be a method', () => {
+      myShoppingListItem.render.should.be.a('function');
+    });
   })
 
 
