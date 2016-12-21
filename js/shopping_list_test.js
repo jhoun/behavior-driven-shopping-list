@@ -31,4 +31,8 @@ class ShoppingList{
       throw new Error("not available");
     }
   }
+
+  removeItems(item){
+
+  }
 }
