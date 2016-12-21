@@ -28,7 +28,7 @@ class ShoppingList{
     if(item instanceof(ShoppingListItem)){
       this.items.push(item);
     } else {
-      throw "error, not an item";
+      throw new Error("not available");
     }
   }
 }

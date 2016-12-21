@@ -101,7 +101,7 @@ describe('ShoppingList', () => {
     })
 
     it('should be a method passing 1 argument', () => {
-      var shoes = new ShoppingListItem('vans', 'checkered slip ons');
+      let shoes = new ShoppingListItem('vans', 'checkered slip ons');
 
       jaysShoppingList.addItems(shoes);
       jaysShoppingList.items.should.contain(shoes);
@@ -109,10 +109,15 @@ describe('ShoppingList', () => {
     });
 
     it('should be an instanceof of ShoppingListItem', () => {
-      var shoes = new ShoppingListItem('vans', 'checkered slip ons');
+      let shoes = new ShoppingListItem('vans', 'checkered slip ons');
 
       jaysShoppingList.addItems(shoes);
       expect(shoes instanceof ShoppingListItem).to.be.true;
-    })
+    });
+
+    it('should not be an instanceof of ShoppingListItem', () => {
+      expectthrow(Error);
+    });
+
   });
 });
