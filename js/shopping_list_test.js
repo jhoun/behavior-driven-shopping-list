@@ -5,7 +5,7 @@ class ShoppingListItem{
     this.is_done = true;
   }
 
-  // check(){
+  check(){
 
-  // };
+  };
 }
