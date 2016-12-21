@@ -63,7 +63,13 @@ describe('ShoppingListItem', () => {
     it('should be a method', () => {
       myShoppingListItem.render.should.be.a('function');
     });
-  })
+
+    it('should return html formatted string', () => {
+      let finished = myShoppingListItem.getIsDone();
+      myShoppingListItem.render().should.equal(`<li class="completed_><span>shoes</span><span>checkered vans</span></li>`);
+    });
+
+  });
 
 
 });
