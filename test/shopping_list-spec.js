@@ -143,7 +143,7 @@ describe('ShoppingList', () => {
       jaysShoppingList.addItems(shirt);
       jaysShoppingList.addItems(hat);
       jaysShoppingList.removeItems();
-      jaysShoppingList.items.
+      jaysShoppingList.items.should.not.contain(hat);
       console.log(jaysShoppingList.items);
 
     })
