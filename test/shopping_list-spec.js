@@ -148,7 +148,13 @@ describe('ShoppingList', () => {
     })
 
     it('should throw error if not an instance', () => {
-      expect(() => jaysShoppingList.addItem('error')).to.throw(Error);
+      expect(() => jaysShoppingList.removeItems('error')).to.throw(Error);
     });
+  })
+
+  describe('render()', () => {
+    it('should be a method', () => {
+      jaysShoppingList.render.should.be.a('function');
+    })
   })
 });
