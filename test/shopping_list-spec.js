@@ -14,13 +14,18 @@ describe('ShoppingListItem', () => {
     ShoppingListItem.should.be.a("function");
   });
 
+  it('should have a name property', () => {
+    expect(myShoppingListItem).to.have.property('name');
+  })
+
+  it('should have a description property', () => {
+    expect(myShoppingListItem).to.have.property('');
+  })
 
   describe('constructor()', () => {
 
   })
-  it('should have a name property', () => {
-    expect(myShoppingListItem).to.have.property('name');
-  })
+
   // let shoppingListItem;
   // beforeEach(() => {
   //   shoppingListItem = new ShoppingListItem('iphone 7s');
