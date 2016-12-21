@@ -19,7 +19,11 @@ describe('ShoppingListItem', () => {
   })
 
   it('should have a description property', () => {
-    expect(myShoppingListItem).to.have.property('');
+    expect(myShoppingListItem).to.have.property('description');
+  })
+
+  it('should have a description property', () => {
+    expect(myShoppingListItem).to.have.property('is_done');
   })
 
   describe('constructor()', () => {
