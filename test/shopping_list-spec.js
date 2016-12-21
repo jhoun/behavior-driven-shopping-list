@@ -84,7 +84,7 @@ describe('ShoppingList', () => {
   })
 
   it('should have empty array', () => {
-    jaysShoppingList.items.should.equal([]);
+    jaysShoppingList.items.should.deep.equal([]);
   })
 
 });
