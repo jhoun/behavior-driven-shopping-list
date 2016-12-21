@@ -68,7 +68,12 @@ describe('ShoppingListItem', () => {
       let finished = myShoppingListItem.getIsDone();
       myShoppingListItem.render().should.equal(`<li class="completed_${finished}"><span>shoes</span><span>checkered vans</span></li>`);
     });
+  });
+})
 
+describe('ShoppingList', () => {
+  it('should be a class', () => {
+    ShoppingList.should.be.a('function');
   });
 
 
