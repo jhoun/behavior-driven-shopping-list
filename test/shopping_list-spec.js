@@ -7,7 +7,7 @@ describe('ShoppingListItem', () => {
   let myShoppingListItem;
 
   beforeEach(function () {
-    myShoppingListItem = new ShoppingListItem("iphone");
+    myShoppingListItem = new ShoppingListItem("shoes", "checkered vans");
   });
 
   it('should be a class', () => {
@@ -32,11 +32,14 @@ describe('ShoppingListItem', () => {
       expect(otherShoppingListItem.name).to.be("iphone");
       expect(otherShoppingListItem.description).to.be("a smart phone");
     })
+
+    it('should have have new instances of name & description', () => {
+      myShoppingListItem.name.should.be.equal('shoes');
+      myShoppingListItem.description.should.be.equal('');
+    })
+
+
   })
 
-  // let shoppingListItem;
-  // beforeEach(() => {
-  //   shoppingListItem = new ShoppingListItem('iphone 7s');
-  // });
 
 });
