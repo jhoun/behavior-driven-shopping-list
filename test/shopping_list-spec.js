@@ -19,7 +19,7 @@ describe('ShoppingListItem', () => {
 
   })
   it('should have a name property', () => {
-    expect(myShoppingListItem).to.have.property('');
+    expect(myShoppingListItem).to.have.property('name');
   })
   // let shoppingListItem;
   // beforeEach(() => {
