@@ -33,4 +33,13 @@ class ShoppingList{
     return `<ul>${toRender.join('')}</ul>`;
 
   }
+
+  getItemById(itemID){
+  var itemsArr = this.items;
+    for(var i = 0; i < itemsArr.length; i++){
+      if (itemsArr[i]._idx === itemID ){
+        return itemsArr[i];
+      }
+    }
+  }
 }

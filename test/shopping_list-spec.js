@@ -92,9 +92,12 @@ describe('ShoppingList', () => {
       jaysShoppingList.addItems(shoes);
       jaysShoppingList.addItems(shirt);
       jaysShoppingList.addItems(hat);
-      jaysShoppingList.render().should.equal('<ul><li class="completed_false"><span>vans</span><span> checkered slip ons</span></li><li class="completed_false"><span>t-shirt</span><span> white</span></li><li class="completed_false"><span>beanie</span><span> blue</span></li></ul>')
+      jaysShoppingList.render().should.equal('<ul><li class="completed_false"><span>vans</span><span> checkered slip ons</span></li><li class="completed_false"><span>t-shirt</span><span> white</span></li><li class="completed_false"><span>beanie</span><span> blue</span></span></li></ul>')
       console.log(jaysShoppingList.render());
 
     })
   })
 });
+
+
+// '<ul><li class="completed_false"><span>vans</span><span> checkered slip ons</span></li><li class="completed_false"><span>t-shirt</span><span> white</span></li><li class="completed_false"><span>beanie</span><span> blue</span></span><button onclick="itemDeleteBtnClick(this._idx)")>&times;</button></li></ul>'
