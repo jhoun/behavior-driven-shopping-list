@@ -30,7 +30,7 @@ class ShoppingList{
       toRender.push(element.render());
     });
 
-    return `<ul>${toRender}</ul>`;
+    return `<ul>${toRender.join('')}</ul>`;
 
   }
 }
