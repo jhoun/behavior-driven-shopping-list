@@ -145,6 +145,7 @@ describe('ShoppingList', () => {
       jaysShoppingList.removeItems();
       jaysShoppingList.items.should.not.contain(hat);
 
+
     })
 
     it('should throw error if not an instance', () => {
@@ -155,6 +156,18 @@ describe('ShoppingList', () => {
   describe('render()', () => {
     it('should be a method', () => {
       jaysShoppingList.render.should.be.a('function');
+    })
+    it('should concatenate the results of ShoppingListItem render()', () => {
+      let shoes = new ShoppingListItem('vans', 'checkered slip ons');
+      let shirt = new ShoppingListItem('t-shirt', 'white');
+      let hat = new ShoppingListItem('beanie', 'blue');
+
+      jaysShoppingList.addItems(shoes);
+      jaysShoppingList.addItems(shirt);
+      jaysShoppingList.addItems(hat);
+      jaysShoppingList.render().should.equal('<ul><li class="completed_false"><span>vans</span><span>checkered slip ons</span></li>,<li class="completed_false"><span>t-shirt</span><span>white</span></li>,<li class="completed_false"><span>beanie</span><span>blue</span></li></ul>')
+      console.log(jaysShoppingList.render());
+
     })
   })
 });

@@ -43,6 +43,14 @@ class ShoppingList{
   }
 
   render(){
+  var toRender = [];
+
+
+    this.items.forEach(function(element) {
+      toRender.push(element.render());
+    });
+
+    return '<ul>' + toRender +  '</ul>';
 
   }
 }
