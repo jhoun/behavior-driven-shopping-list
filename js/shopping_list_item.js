@@ -6,7 +6,7 @@ class ShoppingListItem{
     this.name = name;
     this.description = description;
     this.is_done = false;
-    this._idx = "shoppingListItem_" + uniqueID++;
+    this._idx = "shoppingListItem_" + uniqueID++; //gives an id to each new ShoppingListItem
   }
 
   check(){
@@ -18,7 +18,7 @@ class ShoppingListItem{
   }
 
   render(){
-    return `<li class="completed_${this.is_done}" id="${this._idx}"><span>${this.name}</span><span> ${this.description}</span><input type="checkbox" onlick onchange="changeCheckedStatus('${this._idx}', this)"></li>`;
+    return `<li class="completed_${this.is_done}" id="${this._idx}"><span>${this.name}</span><span> ${this.description}</span><input type="checkbox" onlick onchange="changeCheckedStatus('${this._idx}', this)"><button onclick="removeItemButtonClicked('${this._idx}')">x</button></li>`;
   }
 }
 

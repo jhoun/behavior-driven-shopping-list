@@ -18,12 +18,10 @@ function reRenderShoppingList(){
 
 
 
-// functionn itemDeleteBtunClick(itemIdx, btnEleement) {
-//   console.log("itemIdx", itemIdx_;)
-// }
 
 function changeCheckedStatus(idx, checkbox) {
   if (checkbox.checked) {
+    console.log(idx);
     console.log('checked');
     jaysList.getItemById(idx).check() //i can use check() because this is an instance of shoppingListItem
     console.log(jaysList.getItemById(idx));//shows my shoppingListItems that are from my constructor
@@ -35,6 +33,10 @@ function changeCheckedStatus(idx, checkbox) {
 }
 
 
+function removeItemButtonClicked(idx) {
+  jaysList.removeItems(jaysList.getItemById(idx));
+  reRenderShoppingList();
+}
 
 //The right way to add HTML
 // Use li = document.created Element(‘li”
